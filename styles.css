@@ -55,7 +55,7 @@ body {
 	width: 6.75rem;
 	height: 2.3125rem;
 	margin-right: 3.25rem;
-	background: no-repeat 50% 50% url(assets/logo-min.svg);
+	background: no-repeat 50% 50% url(assets/logo.svg);
 	background-size: contain;
 }
 
@@ -224,8 +224,7 @@ body {
 	font-size: 0.8125rem;
 	font-family: inherit;
 	font-weight: bold;
-	background: no-repeat calc(100% - 1rem) 50% #ffd93e
-		url(assets/arrow-down-min.svg);
+	background: no-repeat calc(100% - 1rem) 50% #ffd93e url(assets/arrow-down.svg);
 	appearance: none;
 }
 
