@@ -65,7 +65,7 @@ body {
 	height: 100%;
 	margin: 0 0 0 auto;
 	padding: 0;
-	background: 50% 50% no-repeat transparent url(assets/icon_list_m@1x-min.svg);
+	background: 50% 50% no-repeat transparent url(assets/icon_list_m@1x.svg);
 	border: none;
 	border-radius: 0;
 	appearance: none;
@@ -460,23 +460,23 @@ body {
 }
 
 .event__icon_temp {
-	background-image: url(assets/icon_temperature-min.svg);
+	background-image: url(assets/icon_temperature.svg);
 }
 
 .event__icon_temp2 {
-	background-image: url(assets/icon_temperature_2-min.svg);
+	background-image: url(assets/icon_temperature_2.svg);
 }
 
 .event__icon_light {
-	background-image: url(assets/icon_sun-min.svg);
+	background-image: url(assets/icon_sun.svg);
 }
 
 .event__icon_light2 {
-	background-image: url(assets/icon_sun_2-min.svg);
+	background-image: url(assets/icon_sun_2.svg);
 }
 
 .event__icon_schedule {
-	background-image: url(assets/icon_scheduled-min.svg);
+	background-image: url(assets/icon_scheduled.svg);
 }
 
 .event__title {
@@ -545,7 +545,7 @@ body {
 	right: 0;
 	width: 18px;
 	bottom: 10px;
-	background: no-repeat 50% 50% url(./assets/arrow-left.jpg);
+	background: no-repeat 50% 50% url(./assets/arrow-left.png);
 	transform: rotate(180deg);
 	cursor: pointer;
 }
