@@ -1,6 +1,6 @@
 function Header() {
-	let [expanded, setExpanded] = React.useState(false)
-	let [toggled, setToggled] = React.useState(false)
+	const [expanded, setExpanded] = React.useState(false)
+	const [toggled, setToggled] = React.useState(false)
 
 	const onClick = () => {
 		if (!toggled) {
@@ -59,9 +59,9 @@ function Event(props) {
 	const { onSize } = props
 
 	React.useEffect(() => {
-		const width = ref.current.offsetWidth
-		const height = ref.current.offsetHeight
 		if (onSize) {
+			const width = ref.current.offsetWidth
+			const height = ref.current.offsetHeight
 			onSize({ width, height })
 		}
 	})
@@ -213,30 +213,36 @@ const TABS = {
 	},
 }
 for (let i = 0; i < 6; ++i) {
-	TABS.all.items = [...TABS.all.items, ...TABS.all.items]
+	// TABS.all.items = [...TABS.all.items, ...TABS.all.items]
+	TABS.all.items = TABS.all.items.concat(TABS.all.items)
 }
 const TABS_KEYS = Object.keys(TABS)
 
+function getDefaultActiveTab() {
+	return new URLSearchParams(location.search).get('tab') || 'all'
+}
+
 function Main() {
 	const ref = React.useRef()
-	const initedRef = React.useRef(false)
-	const [activeTab, setActiveTab] = React.useState('')
+	// const initedRef = React.useRef(false)
+	// const [activeTab, setActiveTab] = React.useState('')
+	const [activeTab, setActiveTab] = React.useState(getDefaultActiveTab)
 	const [hasRightScroll, setHasRightScroll] = React.useState(false)
 
-	React.useEffect(() => {
-		if (!activeTab && !initedRef.current) {
-			initedRef.current = true
-			setActiveTab(new URLSearchParams(location.search).get('tab') || 'all')
-		}
-	})
+	// React.useEffect(() => {
+	// 	if (!activeTab && !initedRef.current) {
+	// 		initedRef.current = true
+	// 		setActiveTab(new URLSearchParams(location.search).get('tab') || 'all')
+	// 	}
+	// })
 
 	const onSelectInput = event => {
 		setActiveTab(event.target.value)
 	}
 
-	let sizes = []
+	const sizes = []
 	const onSize = size => {
-		sizes = [...sizes, size]
+		sizes.push(size)
 	}
 
 	React.useEffect(() => {
